@@ -2,16 +2,16 @@ package com.groupon.dayToDay.models;
 
 public class Company implements Comparable<Company>{
 
-    private int id;
+    private String id;
 
     private String name;
 
-    public Company(int id, String name) {
+    public Company(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -25,7 +25,6 @@ public class Company implements Comparable<Company>{
 
     @Override
     public int compareTo(Company company) {
-//        return this.name.compareTo(company.name);
         return this.getName().compareTo(company.getName());
     }
 }

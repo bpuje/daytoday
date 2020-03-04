@@ -22,26 +22,33 @@ public class CompanyController {
 
     @PostMapping("/company/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public Company addCompany(@RequestBody Company newCompany){
+    public Boolean addCompany(@RequestBody Company newCompany){
 
-//        return companyServiceImpl.addCompany(newCompany);
-        return null;
+        return companyServiceImpl.addCompany(newCompany);
+//        return null;
     }
 
     @PostMapping("/update")
     public List<Company> updateCompanies(int id, Company newCompany){
-
-
+        companyServiceImpl.updateCompany(newCompany);
         return null;
     }
 
-    @GetMapping("/company/{id}")
-    public Object getProductById(@PathVariable("id") int companyId){
 
-        Company product = companyServiceImpl.getProductById(companyId);
+    @GetMapping("/company/{id}")
+    public Object getProductById(@PathVariable("id") String companyId){
+
+        Company product = companyServiceImpl.findByCompanyId(companyId);
         if(product == null){
             return new ResponseEntity<Company>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Company>(product, HttpStatus.OK);
     }
+
+    @DeleteMapping("/company/{id}")
+    public List<Company> removeCompany(@RequestBody Company newCompany){
+        return companyServiceImpl.delete(newCompany);
+    }
+
+
 }
