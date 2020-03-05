@@ -2,19 +2,20 @@ package com.groupon.dayToDay.dataStructure;
 
 import com.groupon.dayToDay.models.Company;
 
-class Node {
-
-    Company data;
-    Node next, prev;
-}
-
 public class MyLinkedList {
 
     Node head;
 
+    class Node {
+
+        Company data;
+        Node next, prev;
+
+    }
+
     // function to create and return a new node
     // of a doubly linked list
-    static Node getNode(Company data) {
+    public Node getNode(Company data) {
 
         // allocate node
         Node newNode = new Node();
@@ -28,7 +29,7 @@ public class MyLinkedList {
 
     // function to insert a new node in sorted way in
     // a sorted doubly linked list
-    static Node sortedInsert(Node head, Node newNode) {
+    public Node sortedInsert(Node head, Node newNode) {
         Node current;
 
         // if list is empty
@@ -63,12 +64,11 @@ public class MyLinkedList {
 
             current.next = newNode;
             newNode.prev = current;
-
         }
         return head;
     }
 
-    public static void deleteCompany(Node head, String deleteCompany){
+    public  void deleteCompany(Node head, String deleteCompany){
 
         while(head != null){
 
@@ -88,7 +88,7 @@ public class MyLinkedList {
         }
     }
 
-    public static void updateCompany(Node head, String nameCompany, Company newName){
+    public  void updateCompany(Node head, String nameCompany, Company newName){
 
         deleteCompany(head, nameCompany);
         sortedInsert(head, getNode(newName));
@@ -96,7 +96,7 @@ public class MyLinkedList {
     }
 
     // function to print the doubly linked list
-    static void printList(Node head) {
+    public void printList(Node head) {
         while (head != null)
         {
             System.out.print(head.data + " ");

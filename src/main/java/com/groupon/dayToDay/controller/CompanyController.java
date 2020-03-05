@@ -1,5 +1,6 @@
 package com.groupon.dayToDay.controller;
 
+import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 import com.groupon.dayToDay.service.impl.CompanyServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import java.util.List;
 
 @RestController
 public class CompanyController {
+
+    MyLinkedList myLinkedList = new MyLinkedList();
 
     @Autowired
     private CompanyServiceImpl companyServiceImpl;

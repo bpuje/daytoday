@@ -1,5 +1,6 @@
 package com.groupon.dayToDay.service.impl;
 
+import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 import com.groupon.dayToDay.repository.ICompanyRepository;
 import com.groupon.dayToDay.repository.impl.CompanyRepositoryImpl;
@@ -12,7 +13,7 @@ import java.util.List;
 public class CompanyServiceImpl implements ICompanyService {
 
     private ICompanyRepository iCompanyRepository = CompanyRepositoryImpl.getInstance();
-    List companyList = iCompanyRepository.getCompanies();
+    List<Company> companyList = iCompanyRepository.getCompanies();
 
     @Override
     public Boolean addCompany(Company company) {
@@ -42,7 +43,7 @@ public class CompanyServiceImpl implements ICompanyService {
     }
 
     @Override
-    public List getAllCompanies() {
+    public List<Company> getAllCompanies() {
         return iCompanyRepository.getCompanies();
     }
 

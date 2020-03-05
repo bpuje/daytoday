@@ -1,5 +1,6 @@
 package com.groupon.dayToDay.repository.impl;
 
+import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 import com.groupon.dayToDay.repository.ICompanyRepository;
 
@@ -10,6 +11,7 @@ import java.util.List;
 public class CompanyRepositoryImpl implements ICompanyRepository {
 
     private List<Company> companyList;
+//    private MyLinkedList companyList;
     private static final CompanyRepositoryImpl INSTANCE = new CompanyRepositoryImpl();
 
     private CompanyRepositoryImpl(){

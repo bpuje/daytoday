@@ -1,5 +1,6 @@
 package com.groupon.dayToDay.repository;
 
+import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 
 import java.util.List;
@@ -9,6 +10,7 @@ public interface ICompanyRepository {
     abstract void addCompany(Company company);
     abstract void updateCompany(Company company);
     abstract void deleteCompany(Company company);
-    abstract List getCompanies();
-    //abstract MyLinkedList<Company> getCompanies();
+    //abstract List<Company> getCompanies();
+
+    abstract MyLinkedList<Company> getCompanies();
 }

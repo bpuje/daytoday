@@ -27,4 +27,5 @@ public class Company implements Comparable<Company>{
     public int compareTo(Company company) {
         return this.getName().compareTo(company.getName());
     }
+
 }
