@@ -1,6 +1,5 @@
 package com.groupon.dayToDay.repository;
 
-import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 
 import java.util.List;

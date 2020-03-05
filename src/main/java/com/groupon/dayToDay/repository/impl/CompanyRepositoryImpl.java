@@ -1,6 +1,5 @@
 package com.groupon.dayToDay.repository.impl;
 
-import com.groupon.dayToDay.dataStructure.MyLinkedList;
 import com.groupon.dayToDay.models.Company;
 import com.groupon.dayToDay.repository.ICompanyRepository;
 
@@ -30,7 +29,7 @@ public class CompanyRepositoryImpl implements ICompanyRepository {
 
     public Company findByCompanyId(String id){
         for(Company company : companyList){
-            if(company.getId() == id) return company;
+            if(company.getId().equals(id)) return company;
         }
         return null;
     }
