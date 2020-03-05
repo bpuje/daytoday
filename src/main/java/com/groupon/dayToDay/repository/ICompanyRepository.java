@@ -10,7 +10,7 @@ public interface ICompanyRepository {
     abstract void addCompany(Company company);
     abstract void updateCompany(Company company);
     abstract void deleteCompany(Company company);
-    //abstract List<Company> getCompanies();
+    abstract List<Company> getCompanies();
 
-    abstract MyLinkedList<Company> getCompanies();
+    //abstract MyLinkedList<Company> getCompanies();
 }

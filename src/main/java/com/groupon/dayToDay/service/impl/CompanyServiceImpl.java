@@ -13,7 +13,7 @@ import java.util.List;
 public class CompanyServiceImpl implements ICompanyService {
 
     private ICompanyRepository iCompanyRepository = CompanyRepositoryImpl.getInstance();
-    List<Company> companyList = iCompanyRepository.getCompanies();
+    //List<Company> companyList = iCompanyRepository.getCompanies();
 
     @Override
     public Boolean addCompany(Company company) {

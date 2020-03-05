@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 public class CompanyController {
 
-    MyLinkedList myLinkedList = new MyLinkedList();
+//    MyLinkedList myLinkedList = new MyLinkedList();
 
     @Autowired
     private CompanyServiceImpl companyServiceImpl;
@@ -31,7 +31,7 @@ public class CompanyController {
 //        return null;
     }
 
-    @PostMapping("/update")
+    @PostMapping("/company/update")
     public List<Company> updateCompanies(int id, Company newCompany){
         companyServiceImpl.updateCompany(newCompany);
         return null;
@@ -49,9 +49,8 @@ public class CompanyController {
     }
 
     @DeleteMapping("/company/{id}")
-    public List<Company> removeCompany(@RequestBody Company newCompany){
+    public List<Company> deleteCompany(@RequestBody Company newCompany){
         return companyServiceImpl.delete(newCompany);
     }
-
 
 }

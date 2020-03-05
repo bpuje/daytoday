@@ -17,9 +17,9 @@ public class CompanyRepositoryImpl implements ICompanyRepository {
     private CompanyRepositoryImpl(){
         if(this.companyList == null){
             this.companyList = new ArrayList<>(Arrays.asList(
-               new Company("123", "Health"),
-               new Company("124", "Beauty"),
-               new Company("125", "Wellness")
+               new Company("123", "Health", "During each full-body workout, participants assault heavy bags with all four limbs, working arm, leg, buttock, and core muscles while expending calories and improving balance."),
+               new Company("124", "Beauty", "People are attracted to bright smiles, like moths to a flame or mechanical moths to giant electromagnets. Improve your pull with this voucher."),
+               new Company("125", "Wellness", "Cocoon Fitness™ POD is a self-automated fitness pod with pre-set weight-management and wellness-exercise programs.")
             ));
         }
     }
